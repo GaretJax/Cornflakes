@@ -1,0 +1,41 @@
+Cornflakes
+==========
+
+A simple HTML5 output generator for PyFlakes
+
+This simple tool is based upon PyFlakes and uses AWK to transform the output of
+the former to a simple HTML5 page.
+
+The usage is simple and at the moment no options are allowed. To generate the
+HTML report for a given file/directory, simply use:
+
+   cornflakes file|directory [output_file]
+
+were would you have used 
+
+   pyflakes file|directory
+   
+
+As a further constraint over the original pyflakes script, cornflakes does not
+parse multiple arguments; this means that only the first file/directory are
+processed.
+
+The results of the processing are saved in the file specified by the output_file
+argument if specified or outputted to stdout.
+
+You have also to copy the master.css file to the directory containing the output
+file (this will be improved in future versions).
+
+For an example of the output look at the "sample" folder.
+
+TODOs
+=====
+
+ * Add multiple file parsing capability
+ * Add some options to define the output file, css inlining, template,...
+ * Remove temporary files (or remove the need for them)
+ * Copy the styles (if not inlined) to the specifed output directory
+ * Imrpove compatibility for non-webkit browsers
+
+
+PyFlakes Homepage: http://divmod.org/trac/wiki/DivmodPyflakes
