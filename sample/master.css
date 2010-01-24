@@ -1,0 +1,130 @@
+body {
+	font-family: Arial;
+}
+
+.pyflakes-list,
+.pyflakes-list ul {
+	margin: 0;
+	padding: 0;
+}
+.pyflakes-list li {
+	display: block;
+}
+
+.pyflakes-list {
+	border: 1px solid #e4e4e4;
+	padding: 0 1px 1px;
+	.border-bottom: 0;
+}
+
+.pyflakes-list > li {
+	background: #ededed;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #bdbdbd;
+}
+
+.pyflakes-list > li > code:first-child {
+	display: block;
+	padding: 5px 10px;
+	color: #333;
+	
+	.border-bottom: 1px solid #fff;
+}
+
+.pyflakes-list ul {
+	.display: none;
+	border-top: 1px solid #dcdcdc;
+	background: #fbfbfb;
+	padding: 10px 10px 20px;
+}
+.pyflakes-list ul li {
+	position: relative;
+	font-size: 0.9em;
+	padding: 4px 0 4px 60px;
+}
+.pyflakes-list ul li+li {
+	margin-top: 2px;
+}
+.pyflakes-list ul li:after {
+	float: right;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	color: #978926;
+	text-shadow: 1px 1px 0px #fff;
+	line-height: 1.8em;
+	padding: 0 6px;
+}
+
+.pyflakes-list ul li.warning {
+	background: rgba(239,215,72,0.28);	
+}
+.pyflakes-list ul li.warning:after {
+	content: "warning";
+}
+
+.pyflakes-list ul li.error {
+	padding: 0;
+}
+.pyflakes-list ul li.error p {
+	background: #dc383b;
+	color: #fff;
+	margin: 0;
+	padding: 4px 0 4px 60px;
+}
+.pyflakes-list ul li.error:after {
+	content: "error";
+	position: absolute;
+	top: 4px;
+	right: 0;
+	color: #fff;
+	text-shadow: #830000 1px 1px 0;
+}
+.pyflakes-list ul li.error pre {
+	margin: 0 0 0 50px;
+	padding: 10px;
+	background: rgba(255,112,114,0.09);
+	color: #660001;
+}
+
+.pyflakes-list ul li > strong {
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: right;
+	height: 100%;
+	display: block;
+	font-size: 0.9em;
+	line-height: 2em;
+	width: 40px;
+	padding-right: 10px;
+	border-right: 1px solid rgba(115,103,15,0.23);
+	color: #978926;
+	text-shadow: 1px 1px 0px #fff;
+}
+.pyflakes-list ul li.error > strong {
+	color: #ffdfdf;
+	text-shadow: #830000 1px 1px 0;
+	border-color: rgba(151,0,2,0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
