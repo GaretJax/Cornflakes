@@ -14,7 +14,6 @@ body {
 .pyflakes-list {
 	border: 1px solid #e4e4e4;
 	padding: 0 1px 1px;
-	.border-bottom: 0;
 }
 
 .pyflakes-list > li {
@@ -27,20 +26,21 @@ body {
 	display: block;
 	padding: 5px 10px;
 	color: #333;
-	
-	.border-bottom: 1px solid #fff;
 }
 
 .pyflakes-list ul {
-	.display: none;
 	border-top: 1px solid #dcdcdc;
 	background: #fbfbfb;
 	padding: 10px 10px 20px;
+}
+.pyflakes-list ul li:first-letter {
+	text-transform: uppercase;
 }
 .pyflakes-list ul li {
 	position: relative;
 	font-size: 0.9em;
 	padding: 4px 0 4px 60px;
+	color: #443d11;
 }
 .pyflakes-list ul li+li {
 	margin-top: 2px;
@@ -54,9 +54,17 @@ body {
 	line-height: 1.8em;
 	padding: 0 6px;
 }
+.pyflakes-list ul li > code {
+	color: #000;
+	padding: 6px 3px 5px;
+	background: #f8eaa0;
+	display: inline-block;
+	margin: -5px 0 -4px 0;
+}
+
 
 .pyflakes-list ul li.warning {
-	background: rgba(239,215,72,0.28);	
+	background: rgba(239,215,72,0.28);
 }
 .pyflakes-list ul li.warning:after {
 	content: "warning";
@@ -81,7 +89,7 @@ body {
 }
 .pyflakes-list ul li.error pre {
 	margin: 0 0 0 50px;
-	padding: 10px;
+	padding: 10px 10px 5px;
 	background: rgba(255,112,114,0.09);
 	color: #660001;
 }
@@ -107,7 +115,10 @@ body {
 	border-color: rgba(151,0,2,0.5);
 }
 
-
+footer {
+	font-size: 0.8em;
+	color: #666;
+}
 
 
 
