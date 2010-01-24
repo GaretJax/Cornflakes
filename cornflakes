@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# A simple script to convert the output of pyflakes to an HTML5 web page
+# Copyright (c) 2010 Jonathan Stoppani <jonathan@garetjax.info>
+
+pyflakes $1 1>pyflakes.warnings 2>pyflakes.errors
+
+DEST=$2
+
+if [ "${DEST}x" == "x" ]
+then
+	# Redirect to stdout if no output file was specified
+	DEST=/dev/tty
+fi
+
+awk -F ':' -f merge.awk -v ERRFILE=errors -v WARNFILE=warnings pyflakes.* |
+sort -t ':' -s -k 1,1 |
+awk -F ':' -f format.awk -v DIR=$1 |
+tee $DEST >/dev/null
